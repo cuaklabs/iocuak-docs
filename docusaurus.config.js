@@ -15,6 +15,7 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "cuaklabs",
   projectName: "iocuak-docs",
+  deploymentBranch: "gh-pages",
 
   presets: [
     [
