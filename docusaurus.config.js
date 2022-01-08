@@ -8,13 +8,13 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "IoCuak",
   tagline: "The simple IoC container",
-  url: "https://github.com/cuaklabs/cuaktask/tree/master/packages/iocuak",
+  url: "http://cuaklabs.github.io/iocuak-docs",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "cuaklabs", // Usually your GitHub org/user name.
-  projectName: "iocuak-docs", // Usually your repo name.
+  organizationName: "cuaklabs",
+  projectName: "iocuak-docs",
 
   presets: [
     [
