@@ -11,7 +11,7 @@ import { ContainerApi, injectable } from '@cuaklabs/iocuak';
 @injectable()
 class Dummy {}
 
-const containerApi: ContainerApi = ContainerApi.build();
+const containerApi: ContainerApi = new ContainerApi();
 containerApi.bind(Dummy);
 
 const dummyInstance: Dummy = containerApi.get(Dummy);

@@ -10,7 +10,7 @@ import { ContainerApi } from '@cuaklabs/iocuak';
 
 class Dummy {}
 
-const containerApi: ContainerApi = ContainerApi.build();
+const containerApi: ContainerApi = new ContainerApi();
 containerApi.bind(Dummy);
 
 ```
