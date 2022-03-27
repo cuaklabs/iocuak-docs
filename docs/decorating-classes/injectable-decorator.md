@@ -16,7 +16,7 @@ First of all, let's talk about metadata we may provide:
   - Singleton: An instance of this service is allways reused.
 
 ```ts
-import { injectable, TaskScope } from '@cuaklabs/iocuak';
+import { injectable, TaskScopeApi } from '@cuaklabs/iocuak';
 
 /**
  * Foo is injectable on transient scope and its service id is the type Foo itself
@@ -31,7 +31,7 @@ const barSymbol: symbol = Symbol();
  */
 @injectable({
   id: barSymbol,
-  scope: TaskScope.singleton,
+  scope: TaskScopeApi.singleton,
 })
 class Bar {}
 
