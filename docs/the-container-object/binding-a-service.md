@@ -6,23 +6,27 @@ title: Binding a service
 Services can be easily bound to the container calling it directly.
 
 ```ts
-import { ContainerApi } from '@cuaklabs/iocuak';
+import { Container } from '@cuaklabs/iocuak';
 
 class Dummy {}
 
-const containerApi: ContainerApi = ContainerApi.build();
-containerApi.bind(Dummy);
+const container: Container = Container.build();
+container.bind(Dummy);
 
 ```
 
-Services can also be bound through a `ContainerModuleApi`:
+Services can also be bound through a `ContainerModule`:
 
 ```ts
-const containerModuleApi: ContainerModuleApi = {
-  load: (container: ContainerApiService): void => {
+import { ContainerModule, ContainerService } from '@cuaklabs/iocuak';
+
+const container: Container = Container.build();
+
+const containerModule: ContainerModule = {
+  load: (container: ContainerService): void => {
       container.bind(Dummy);
   },
 };
 
-container.load(containerModuleApi);
+container.load(containerModule);
 ```
