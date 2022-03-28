@@ -52,6 +52,11 @@ const config = {
             label: "Tutorial",
           },
           {
+            type: "docsVersionDropdown",
+            label: "Versions",
+            position: "right",
+          },
+          {
             href: "https://github.com/cuaklabs/cuaktask/tree/master/packages/iocuak",
             label: "GitHub",
             position: "right",
