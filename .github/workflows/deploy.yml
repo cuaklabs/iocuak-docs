@@ -13,11 +13,21 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16.x
-          cache: npm
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: -${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            pnpm-modules
+      - uses: pnpm/action-setup@v2.2.1
+        with:
+          version: 6.31.0
+          run_install: |
+            - recursive: true
       - name: Build docs
         run: |
-          npm ci
-          npm run build
+          pnpm run build
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
