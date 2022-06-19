@@ -5,6 +5,12 @@
     "pnpm": "7"
   },
   "extends": ["config:base", ":disableRateLimiting"],
+  "ignoreDeps": [
+    "@types/react",
+    "@mdx-js/react",
+    "react",
+    "react-dom"
+  ],
   "rebaseWhen": "conflicted",
   "semanticCommits": "enabled",
   "schedule": [
