@@ -9,22 +9,37 @@ jobs:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 16.x
-      - name: Cache pnpm modules
-        uses: actions/cache@v3
+          node-version: 16
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
         with:
-          path: ~/.pnpm-store
-          key: -${{ hashFiles('**/pnpm-lock.yaml') }}
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: pnpm-store-${{ hashFiles('**/package.json') }}
           restore-keys: |
-            pnpm-modules
-      - uses: pnpm/action-setup@v2.2.2
-        with:
-          version: 6.31.0
-          run_install: |
-            - recursive: true
+            pnpm-store-
+        
+      - name: Install dependencies
+        run: pnpm --recursive install
+
       - name: Build docs
         run: |
           pnpm run build
