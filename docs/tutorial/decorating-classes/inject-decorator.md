@@ -3,7 +3,7 @@ sidebar_position: 2
 title: The inject decorator
 ---
 
-This decorator targets a property or a parameter and provides the service id associated to that property or parameter.
+This decorator targets a property or a parameter and provides the service associated.
 
 ```ts
 import { inject } from '@cuaklabs/iocuak';

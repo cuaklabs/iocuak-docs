@@ -26,9 +26,10 @@ async function entryPoint(): Promise<void> {
   const containerModuleMetadata: ContainerModuleMetadata = {
     factory: (someServiceDependency: Dependency) => ({
       load: (containerModuleBindingService: ContainerModuleBindingService) => {
-        containerModuleBindingService.bindToValue(
-          'service-id', someServiceDependency.someValue,
-        );
+        containerModuleBindingService.bindToValue({
+          serviceId: 'service-id',
+          value: someServiceDependency.someValue,
+        });
       }
     }),
     imports: [someContainerModuleMetadataDependency],
@@ -65,9 +66,10 @@ class MyContainerModule implements ContainerModule {
   ) {}
 
   public load: (containerModuleBindingService: ContainerModuleBindingService) => {
-    containerModuleBindingService.bindToValue(
-      'service-id', someServiceDependency.someValue,
-    );
+    containerModuleBindingService.bindToValue({
+      serviceId: 'service-id',
+      value: someServiceDependency.someValue,
+    });
   }
 }
 
