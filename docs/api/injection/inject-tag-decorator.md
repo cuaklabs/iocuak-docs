@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: The injectTag decorator
+title: injectTag
 ---
 
 This decorator targets a property or a parameter and provides the services associated to that tag.
@@ -17,4 +17,4 @@ class Dummy {
 
 ```
 
-This way the IoC container knows the property `foo` should be injected with the services associated to `dummyTag` tag.
+Troperty `foo` is injected with the services associated to the `dummyTag` tag.

@@ -1,9 +1,9 @@
 ---
-sidebar_position: 3
-title: The injectFromBase decorator
+sidebar_position: 4
+title: injectFromBase
 ---
 
-`@injectabe` and `@inject` metadata is not propagated to child classes. The purpose of `@injectFromBase` decorator exists for that purpose.
+`@injectabe` and `@inject` metadata are not propagated to child classes. `@injectFromBase` decorator exists for that purpose.
 
 ```ts
 import { inject, injectable } from '@cuaklabs/iocuak';

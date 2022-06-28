@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: The injectable decorator
+title: injectable
 ---
 
 This decorator targets a class and allows to provide options to set its binding.
@@ -13,17 +13,6 @@ import { injectable, BindingScope } from '@cuaklabs/iocuak';
  */
 @injectable()
 class Foo {}
-
-const barSymbol: symbol = Symbol();
-
-/** 
- * Bar is injectable on singleton scope. Its service id is the barSymbol symbol
- */
-@injectable({
-  id: barSymbol,
-  scope: BindingScope.singleton,
-})
-class Bar {}
 
 const bazSymbol: symbol = Symbol();
 
@@ -38,6 +27,14 @@ const bazSymbol: symbol = Symbol();
 })
 class Baz {}
 ```
+
+The options parameter is described as follows:
+
+| Property    | Description                    | Type                                                         |
+| :---        | :----:                         | :---:                                                        |
+| serviceId   | Service id to associate        | number \| string \| symbol                                   |
+| tags        | Tags to associate              | number \| string \| symbol \| (number \| string \| symbol)[] |
+| scope       | Binding scope                  | BindingScope                                                 |
 
 :::info
 

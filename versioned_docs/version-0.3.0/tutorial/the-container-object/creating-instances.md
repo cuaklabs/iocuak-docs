@@ -6,13 +6,13 @@ title: Creating instances
 Once a service and all its dependencies are bound, its possible to create an instance if all the classes involved are properly decorated
 
 ```ts
-import { ContainerApi, injectable } from '@cuaklabs/iocuak';
+import { Container, injectable } from '@cuaklabs/iocuak';
 
 @injectable()
 class Dummy {}
 
-const containerApi: ContainerApi = new ContainerApi();
-containerApi.bind(Dummy);
+const container: Container = Container.build();
+container.bind(Dummy);
 
-const dummyInstance: Dummy = containerApi.get(Dummy);
+const dummyInstance: Dummy = container.get(Dummy);
 ```

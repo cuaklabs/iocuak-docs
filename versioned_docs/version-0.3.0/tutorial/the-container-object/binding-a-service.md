@@ -1,9 +1,21 @@
 ---
 sidebar_position: 2
-title: Creating modules
+title: Binding a service
 ---
 
-A container module declares a `load` method receiving a `ContainerModuleBindingService`. This service allows us to bind types and values.
+Services can be easily bound to the container calling it directly.
+
+```ts
+import { Container } from '@cuaklabs/iocuak';
+
+class Dummy {}
+
+const container: Container = Container.build();
+container.bind(Dummy);
+
+```
+
+Services can also be bound through a `ContainerModule`:
 
 ```ts
 import { ContainerModule, ContainerModuleBindingService } from '@cuaklabs/iocuak';
@@ -18,5 +30,3 @@ const containerModule: ContainerModule = {
 
 container.load(containerModule);
 ```
-
-This way different service bindings can be grouped.
