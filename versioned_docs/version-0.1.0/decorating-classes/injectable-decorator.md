@@ -13,7 +13,7 @@ First of all, let's talk about metadata we may provide:
 
     **Example**: Given the services `A`, `B` and `C`, both `A` and `B` services depends on `C`. In addition, `A` services depends on `B`. If `C` is injected on request scope, a request to the `A` service results in the same `C` instance being injected to both `A` and `B` services.
 
-  - Singleton: An instance of this service is allways reused.
+  - Singleton: An instance of this service is always reused.
 
 ```ts
 import { injectable, BindingScope } from '@cuaklabs/iocuak';
