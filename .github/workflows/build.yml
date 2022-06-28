@@ -57,9 +57,9 @@ jobs:
         with:
           path: |
             ./build
-          key: docusaurus-build-$GITHUB_REF-${{ steps.get-git-commit-hash.outputs.gitCommitHash }}
+          key: docusaurus-build-${{ github.ref }}-${{ steps.get-git-commit-hash.outputs.gitCommitHash }}
           restore-keys: |
-            docusaurus-build-$GITHUB_REF-${{ steps.get-git-commit-hash.outputs.gitCommitHash }}
+            docusaurus-build-${{ github.ref }}-${{ steps.get-git-commit-hash.outputs.gitCommitHash }}
 
       - name: Build docs
         run: |
