@@ -19,4 +19,4 @@ const containerModule: ContainerModule = {
 container.load(containerModule);
 ```
 
-This way different service bindings can be grouped in different modules.
+This way different service bindings can be grouped.
