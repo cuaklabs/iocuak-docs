@@ -1,13 +1,17 @@
 name: Deploy to GitHub Pages
-
+concurrency: 
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 on:
-  push:
-    branches: [master]
+  pull_request:
+    types:
+      - closed
 
 jobs:
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -50,9 +54,9 @@ jobs:
         with:
           path: |
             ./build
-          key: docusaurus-build-${{ steps.get-git-commit-hash.outputs.gitCommitHash }}
+          key: docusaurus-build-${{ github.ref }}-${{ steps.get-git-commit-hash.outputs.gitCommitHash }}
           restore-keys: |
-            docusaurus-build-${{ steps.get-git-commit-hash.outputs.gitCommitHash }}
+            docusaurus-build-${{ github.ref }}-
 
       - name: Build docs
         run: |
