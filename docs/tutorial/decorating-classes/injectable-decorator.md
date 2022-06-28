@@ -25,6 +25,16 @@ const barSymbol: symbol = Symbol();
 })
 class Bar {}
 
+/** 
+ * Bar is injectable on request scope. Its service id is the bazSymbol symbol.
+ * It's associated to the providers tag
+ */
+@injectable({
+  id: bazSymbol,
+  scope: BindingScope.request,
+  tags: [providers]
+})
+class Baz {}
 ```
 
 :::info
