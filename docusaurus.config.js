@@ -57,7 +57,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://github.com/cuaklabs/cuaktask/tree/master/packages/iocuak",
+            href: "https://github.com/cuaklabs/iocuak/tree/master/packages/iocuak",
             label: "GitHub",
             position: "right",
           },
@@ -71,7 +71,7 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/cuaklabs/cuaktask/tree/master/packages/iocuak",
+                href: "https://github.com/cuaklabs/iocuak/tree/master/packages/iocuak",
               },
             ],
           },
