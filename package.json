@@ -28,9 +28,9 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.1.1",
+    "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
-    "@commitlint/prompt-cli": "17.1.1",
+    "@commitlint/prompt-cli": "17.1.2",
     "@docusaurus/module-type-aliases": "2.0.1",
     "@docusaurus/plugin-content-docs": "2.0.1",
     "@docusaurus/types": "2.0.1",
