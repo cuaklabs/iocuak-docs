@@ -18,13 +18,13 @@ container.bind(Dummy);
 Services can also be bound through a `ContainerModule`:
 
 ```ts
-import { ContainerModule, ContainerService } from '@cuaklabs/iocuak';
+import { ContainerModule, ContainerModuleBindingService } from '@cuaklabs/iocuak';
 
 const container: Container = Container.build();
 
 const containerModule: ContainerModule = {
-  load: (container: ContainerService): void => {
-      container.bind(Dummy);
+  load: (containerModuleBindingService: ContainerModuleBindingService): void => {
+      containerModuleBindingService.bind(Dummy);
   },
 };
 
