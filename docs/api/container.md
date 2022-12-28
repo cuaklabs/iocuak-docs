@@ -3,9 +3,13 @@ sidebar_position: 1
 title: Container API
 ---
 
-### `bind(type)`
+### `bind(type, options)`
 
-Binds a type. The container takes any binding associated to that type and process it.
+Binds a type. The container takes any binding associated to that type and process it. Optionally, it receives an options parameter:
+
+| Property    | Description                    | Type                                                         |
+| :---        | :----:                         | :---:                                                        |
+| scope       | Binding scope to apply         | BindingScope    |
 
 ### `bindToValue(options)`
 
