@@ -89,3 +89,5 @@ async function entryPoint(): Promise<void> {
 Optionally, a container module metadata class can be passed insted. This is equivalent to a metadata with the class as module and no imports.
 
 This approach is highly inspired on [NestJs modules](https://docs.nestjs.com/fundamentals/dynamic-modules).
+
+Consider the [ContainerModuleMetadata](../../concepts/container-module-metadata.md) page as reference to know more about `ContainerModuleMetadata` details.
