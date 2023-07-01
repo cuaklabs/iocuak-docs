@@ -34,7 +34,7 @@
     "@docusaurus/module-type-aliases": "2.4.1",
     "@docusaurus/plugin-content-docs": "2.4.1",
     "@docusaurus/types": "2.4.1",
-    "@tsconfig/docusaurus": "1.0.7",
+    "@tsconfig/docusaurus": "2.0.0",
     "@types/node": "18.16.19",
     "husky": "8.0.3",
     "ts-node": "10.9.1",
