@@ -8,7 +8,7 @@ Represents a relation between an injectable element and its dependencies. Whenev
 | Property             | Description                    | Type                                        |
 | :---                 | :----:                         | :---:                                       |
 | constructorArguments | Constructor arguments metadata | ClassElementMetadata                        |
-| properties           | Properties metadata.           | Map<string \| symbol, ClassElementMetadata> |
+| properties           | Properties metadata.           | Map\<string \| symbol, ClassElementMetadata\> |
 
 ## ClassElementMetadata
 
