@@ -28,9 +28,9 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "18.4.3",
-    "@commitlint/config-conventional": "18.4.3",
-    "@commitlint/prompt-cli": "18.4.3",
+    "@commitlint/cli": "18.4.4",
+    "@commitlint/config-conventional": "18.4.4",
+    "@commitlint/prompt-cli": "18.4.4",
     "@docusaurus/module-type-aliases": "3.0.1",
     "@docusaurus/plugin-content-docs": "3.0.1",
     "@docusaurus/types": "3.0.1",
