@@ -2,7 +2,7 @@
   "name": "iocuak-docs",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@8.15.2",
+  "packageManager": "pnpm@8.15.3",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -35,7 +35,7 @@
     "@docusaurus/plugin-content-docs": "3.1.1",
     "@docusaurus/types": "3.1.1",
     "@tsconfig/docusaurus": "2.0.2",
-    "@types/node": "20.11.17",
+    "@types/node": "20.11.18",
     "husky": "9.0.11",
     "ts-node": "10.9.2",
     "typescript": "5.3.3"
