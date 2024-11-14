@@ -2,7 +2,7 @@
   "name": "iocuak-docs",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@9.13.0",
+  "packageManager": "pnpm@9.13.1",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -17,7 +17,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@algolia/client-search": "5.13.0",
+    "@algolia/client-search": "5.14.0",
     "@docusaurus/core": "3.6.1",
     "@docusaurus/preset-classic": "3.6.1",
     "@mdx-js/react": "3.0.0",
