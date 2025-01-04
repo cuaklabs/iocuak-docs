@@ -30,7 +30,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
-    "@commitlint/prompt-cli": "19.6.1",
+    "@commitlint/prompt-cli": "19.7.0",
     "@docusaurus/module-type-aliases": "3.7.0",
     "@docusaurus/plugin-content-docs": "3.7.0",
     "@docusaurus/types": "3.7.0",
