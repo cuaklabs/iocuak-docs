@@ -38,7 +38,7 @@
     "@types/node": "20.17.12",
     "husky": "9.1.7",
     "ts-node": "10.9.2",
-    "typescript": "5.7.2"
+    "typescript": "5.7.3"
   },
   "browserslist": {
     "production": [
