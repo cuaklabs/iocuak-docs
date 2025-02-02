@@ -2,7 +2,7 @@
   "name": "iocuak-docs",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@9.15.5",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -28,9 +28,9 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.6.1",
-    "@commitlint/config-conventional": "19.6.0",
-    "@commitlint/prompt-cli": "19.7.0",
+    "@commitlint/cli": "19.7.1",
+    "@commitlint/config-conventional": "19.7.1",
+    "@commitlint/prompt-cli": "19.7.1",
     "@docusaurus/module-type-aliases": "3.7.0",
     "@docusaurus/plugin-content-docs": "3.7.0",
     "@docusaurus/types": "3.7.0",
